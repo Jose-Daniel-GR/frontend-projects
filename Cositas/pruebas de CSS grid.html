@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grid Layout Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 250px 600px;
+            border: 2px solid yellow;
+        }
+
+        .box {
+            border: 2px solid red;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+        }
+
+        /* Primer elemento ocupa toda la fila superior */
+        #one { 
+            grid-area: 1 / 1 / 2 / 4;
+            background-color: lightcoral;
+        }
+
+        /* Segundo elemento ocupa las dos primeras columnas de la segunda fila */
+        #two { 
+            grid-area: 2 / 1 / 3 / 3;
+            background-color: lightgreen;
+        }
+
+        /* Tercer elemento en la segunda fila, última columna */
+        #three { 
+            grid-area: 2 / 3 / 3 / 4;
+            background-color: lightsalmon;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="one" class="box">Space 1 - Header</div>
+        <div id="two" class="box">Space 2 - Content</div>
+        <div id="three" class="box">Space 3 - Sidebar</div>
+    </div>
+</body>
+</html>

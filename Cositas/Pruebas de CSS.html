@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasitos de CSS</title>
+    <style>
+        /* Type selector */
+        button {
+            background-color: aqua;
+            height: 80px;
+            width: 150px;
+            color: brown;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Class Selector */
+        .title {
+            font-style: italic;
+            font-size: 50px;
+            color: darkblue;
+        }
+
+        /* ID Selector */
+        #content {
+            font-size: 23px;
+            color: darkgreen;
+        }
+
+        /* Selectores de atributos */
+
+        /* 1. Selecciona cualquier input con el atributo 'type' igual a 'text' */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+
+        /* 2. Selecciona cualquier enlace que comience con "https://" */
+        a[href^="https"] {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* 3. Selecciona cualquier imagen que termine en ".png" */
+        img[src$=".jpg"] {
+            border: 3px solid red;
+        }
+
+        /* 4. Selecciona cualquier elemento con un atributo data-color */
+        [data-color] {
+            background-color: blanchedalmond;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Selector For Attributes</h1>
+    <h6 class="title">Other title</h6>
+    
+    <p id="content">Selecting HTML elements is fun with CSS selectors!</p>
+
+    <button>Go go gadget!</button>
+
+    <!-- Ejemplos con atributos -->
+    <input type="text" placeholder="Escribe algo aquí...">
+    <br><br>
+    <a href="https://example.com">Ir a Example.com</a>
+    <br><br>
+    <img src="images.jpg" alt="Ejemplo de imagen con extensión jpg">
+    <br><br>
+    <div data-color="amarillo">Este div tiene un atributo personalizado</div>
+
+</body>
+</html>
